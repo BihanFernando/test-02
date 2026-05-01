@@ -1,15 +1,11 @@
 package com.example.demo.service;
 
 import com.example.demo.dto.AddressDTO;
+import com.example.demo.dto.CityDTO;
+import com.example.demo.dto.CountryDTO;
 import com.example.demo.entity.Address;
-import com.example.demo.entity.City;
-import com.example.demo.entity.Country;
-import com.example.demo.entity.Customer;
 import com.example.demo.exception.InvalidInputException;
 import com.example.demo.repository.AddressRepository;
-import com.example.demo.repository.CityRepository;
-import com.example.demo.repository.CountryRepository;
-import com.example.demo.repository.CustomerRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -25,9 +21,6 @@ import java.util.stream.Collectors;
 public class AddressService {
     
     private final AddressRepository addressRepository;
-    private final CustomerRepository customerRepository;
-    private final CityRepository cityRepository;
-    private final CountryRepository countryRepository;
     
     /**
      * Get address by ID
